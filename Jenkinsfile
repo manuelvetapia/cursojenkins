@@ -5,7 +5,9 @@ pipeline {
       steps {
         echo 'Hola mundo'
         sh '''printenv
-echo $NOMBRE'''
+echo $NOMBRE
+mkdir nuevo
+ls'''
       }
     }
 
@@ -13,7 +15,6 @@ echo $NOMBRE'''
       steps {
         writeFile(file: 'holamundo.txt', text: 'adios $NOMBRE')
         archiveArtifacts(allowEmptyArchive: true, artifacts: '*.txt')
-        readFile 'holamundo.txt'
       }
     }
 
