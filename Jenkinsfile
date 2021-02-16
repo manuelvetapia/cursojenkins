@@ -11,7 +11,7 @@ pipeline {
     stage('Despedida') {
       steps {
         writeFile(file: 'holamundo.txt', text: 'adios')
-        archiveArtifacts(allowEmptyArchive: true, artifacts: '/*.txt')
+        archiveArtifacts(allowEmptyArchive: true, artifacts: '*.txt')
       }
     }
 
