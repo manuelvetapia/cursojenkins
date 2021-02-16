@@ -21,6 +21,12 @@ git status'''
       }
     }
 
+    stage('adicional') {
+      steps {
+        sh 'git remote -v'
+      }
+    }
+
   }
   environment {
     NOMBRE = 'Manuel'
