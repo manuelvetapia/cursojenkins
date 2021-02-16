@@ -11,7 +11,7 @@ echo $NOMBRE'''
 
     stage('Despedida') {
       steps {
-        writeFile(file: 'holamundo.txt', text: 'adios')
+        writeFile(file: 'holamundo.txt', text: 'adios $NOMBRE')
         archiveArtifacts(allowEmptyArchive: true, artifacts: '*.txt')
       }
     }
