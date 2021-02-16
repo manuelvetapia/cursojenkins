@@ -23,7 +23,10 @@ git status'''
 
     stage('adicional') {
       steps {
-        sh 'git remote -v'
+        sh '''ls
+git remote -v
+git add holamundo.txt
+git push origin main'''
       }
     }
 
