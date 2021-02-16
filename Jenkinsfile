@@ -8,5 +8,11 @@ pipeline {
       }
     }
 
+    stage('Despedida') {
+      steps {
+        writeFile(file: 'holamundo.txt', text: 'adios')
+      }
+    }
+
   }
 }
