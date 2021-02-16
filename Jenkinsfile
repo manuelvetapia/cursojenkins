@@ -13,6 +13,7 @@ echo $NOMBRE'''
       steps {
         writeFile(file: 'holamundo.txt', text: 'adios $NOMBRE')
         archiveArtifacts(allowEmptyArchive: true, artifacts: '*.txt')
+        readFile 'holamundo.txt'
       }
     }
 
