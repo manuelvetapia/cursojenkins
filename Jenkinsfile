@@ -4,7 +4,8 @@ pipeline {
     stage('Saludos') {
       steps {
         echo 'Hola mundo'
-        sh 'printenv'
+        sh '''printenv
+echo $NOMBRE'''
       }
     }
 
@@ -15,5 +16,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    NOMBRE = 'Manuel'
   }
 }
