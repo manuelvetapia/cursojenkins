@@ -7,14 +7,17 @@ pipeline {
         sh '''printenv
 echo $NOMBRE
 mkdir nuevo
-ls'''
+ls
+git status'''
       }
     }
 
     stage('Despedida') {
       steps {
-        writeFile(file: 'holamundo.txt', text: 'adios $NOMBRE')
+        writeFile(file: 'holamundo.txt', text: 'adios ')
         archiveArtifacts(allowEmptyArchive: true, artifacts: '*.txt')
+        sh '''ls
+git status'''
       }
     }
 
