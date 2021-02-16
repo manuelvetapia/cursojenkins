@@ -9,6 +9,7 @@ echo $NOMBRE
 mkdir nuevo
 ls
 git status'''
+        bat(script: 'echo %PATH%', returnStdout: true)
       }
     }
 
