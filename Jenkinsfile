@@ -27,6 +27,12 @@ git status'''
       }
     }
 
+    stage('Final') {
+      steps {
+        input(message: 'estas seguro que deseas terminar?', ok: 'si a darle')
+      }
+    }
+
   }
   environment {
     NOMBRE = 'Manuel'
